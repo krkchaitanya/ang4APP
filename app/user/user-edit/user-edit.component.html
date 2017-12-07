@@ -1,9 +1,0 @@
-<div class="container">
-  <h3>user Edit</h3>
-  <form (ngSubmit)="update()" #f='ngForm' class="form-group">
-<input type="text" class="form-control"name="first_name" [(ngModel)]="userEdit.first_name"/>
-<input type="text" name="last_name" class="form-control"[(ngModel)]="userEdit.last_name"/>
-<input type="text" name="email" class="form-control"[(ngModel)]="userEdit.email"/>
-<input type="submit" class="btn btn-info"/>
-  </form>
-</div>

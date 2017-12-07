@@ -1,0 +1,33 @@
+<div class="container">
+    <hr/>
+    <app-human (newHuman)="onAddPerson($event)"></app-human>
+    <hr/>
+<p class="lead">App Component</p>
+<hr/>
+<div class="row">
+  <div class="col-xs-8">
+    <ul class="list-group" *ngFor="let server of persons">
+      <li class="list-item">
+      {{server.name}}--{{server.id}}--{{server.location}}
+      </li>
+    </ul>
+  </div>
+</div>
+<hr/>
+<h4 class="lead" appBasicHighlight>Something about the directive</h4><br/>
+<h3 colorIt>Some other directive creation</h3>
+<br/>
+<button [disabled]="!btnprop" (click)="onCreateServer()" class="btn btn-success btn-lg" type="button">Get-Data</button>
+<!-- <hr/>
+<app-server-item [servers]="servers"></app-server-item> -->
+<hr/>
+<form>
+<div class="form-group">
+ <input type="text" class="form-control"  name="username">
+</div>
+</form>
+<hr/>
+<h4 class="lead">{{twoway}}</h4>
+<hr/>
+<app-server *ngFor="let server of servers" [element]="server"></app-server>
+</div>

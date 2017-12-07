@@ -1,0 +1,14 @@
+<div class="container">
+  <form class="form-group">
+    <div class="container">
+      <label for="name">Name</label>
+      <input id="name" name="name" id="name" class="form-control"placeholder="name" [(ngModel)]="newName">
+    </div>
+    <div class="container">
+      <label for="location">location</label>
+      <input type="text" class="form-control" id="location" placeholder="location" [(ngModel)]="newLocation" name="location">
+    </div>
+  </form>
+  <br/>
+  <button class="btn btn-success" (click)="addNewPerson()">AddNewPersonDetails</button>
+</div>

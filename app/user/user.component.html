@@ -1,4 +1,0 @@
-<h2>user component</h2>
-{{ users | json}}
-<app-user-new  (createNewUserEvent)="create($event)"></app-user-new>
-<app-user-list [users]="users"  (destroyUserEvent)='destroy($event)' (updateUserEvent)="update($event)"></app-user-list>
