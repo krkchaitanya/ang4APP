@@ -13,6 +13,7 @@ import { InternalFormsSharedModule } from '@angular/forms/src/directives';
 import { HumanComponent } from './human/human.component';
 import {BasicHighlightDirective} from "./basic-highlight.directive";
 import {ColorItDirective} from "./colorit/colorit.directive";
+import { AngformComponent } from './angform/angform.component';
 
 
 
@@ -24,7 +25,8 @@ import {ColorItDirective} from "./colorit/colorit.directive";
     ServerItemComponent,
     HumanComponent,
     BasicHighlightDirective,
-    ColorItDirective
+    ColorItDirective,
+    AngformComponent
   ],
   imports: [
     BrowserModule,
