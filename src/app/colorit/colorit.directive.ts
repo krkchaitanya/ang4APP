@@ -1,21 +1,24 @@
-import { Directive, Renderer2, ElementRef, OnInit, HostListener} from "@angular/core";
+import { HostListener, ElementRef,Directive, Renderer2, OnInit} from "@angular/core";
+import { Renderer } from "@angular/core/src/render/api";
 
 @Directive({
     selector:"[colorIt]"
 })
 
 export class ColorItDirective implements OnInit{
-    constructor(private elRef:ElementRef , private renderer:Renderer2){
-    }
 
-    ngOnInit(){
-        // this.renderer.setStyle(this.elRef.nativeElement,'background-color','blue');
-    }
+constructor(private elementRef:ElementRef, private renderer:Renderer2){}
 
-    @HostListener('mouseenter') mouseover(eventData :Event){
-        this.renderer.setStyle(this.elRef.nativeElement,'background-color','blue',false,false);
-    }
-    @HostListener('mouseleave') mouseleave(eventData:Event){
-        this.renderer.setStyle(this.elRef.nativeElement,'background-color','transparent',false,false);
-    }
+ngOnInit(){
+
+}
+
+@HostListener("mouseenter") mouseover(eventData:Event){
+    this.renderer.setStyle(this.elementRef.nativeElement,'background-color','grey',false,false);
+}
+
+@HostListener('mouseleave') mouseleave(eventData:Event){
+ this.renderer.setStyle(this.elementRef.nativeElement,'background-color','yellow',false,false);
+}
+
 }
