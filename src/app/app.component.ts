@@ -60,8 +60,8 @@ this.persons.push({
     console.log("btn clicked on app component");
     };
 
-let getId=function(){
+var getId=function(){
   return Math.floor(Math.random()*100); 
 };
-}
+};
 
